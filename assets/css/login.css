@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.wrapper{
+	background: linear-gradient(-45deg, #23d5ab, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	font-family: 'Be Vietnam Pro', sans-serif;
+	height: 100%;
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+@keyframes gradient{
+	0%{
+		background-position: 0% 50%;
+	}
+	50%{
+		background-position: 100% 50%;
+	}
+	100%{
+		background-position: 0% 50%;
+	}
+}
+
+.wrapp__login{
+	font-size: .9em;
+	position: relative;
+	width: 360px;
+	height: 500px;
+	box-shadow: 0 4px 8px 4px rgba(0, 0, 0, .1);
+}
+
+.wrapp__login .t{
+	height: 100%;
+	justify-content: space-between;
+}
+
+.login__top{
+	position: relative;
+	display: grid;
+	place-items: center;
+}
+
+.login__top img{
+	position: absolute;
+	top: -80px;
+	width: 90%;
+	box-shadow: 0 4px 8px 4px rgba(0, 0, 0, .1);
+	border: 2px solid #fff;
+	height: 230px;
+	object-fit: cover;
+}
+
+
+.login__bot{
+	height:50%;
+}
+
+.login__bot h3{
+	color: #5ccad3;
+	font-weight: bold;
+	font-size: 1.6em;
+}
+
+.login__bot label{
+	color: #666;
+}
+
+.login__bot .btn.btn-log{
+	width: 100%;
+	color: #fff;
+	background: linear-gradient(-45deg, #23d5ab, #23a6d5);
+	background-size: 200%;
+	transition: .3s;
+}
+
+.login__bot .btn.btn-log:hover{
+	background-size: 100%;
+}
+
+.wrapp__login p{
+	color: rgba(0, 0, 0, .3);
+	font-size: .73em;
+}
+
+.login__bot .error_msg.isAct{
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.login__bot .error_msg{
+	bottom: -50px;
+	color: #333;
+	box-shadow: 0 4px 8px 4px rgba(0, 0, 0, .1);
+	background: #fff;
+	position: absolute;
+	font-size: .7em;
+	opacity: 0;
+	transition: all 1s;
+	transform: translateY(50%);
+}
+
+/*Splash*/
+
+.splash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 9999;
+}
+        
+.splash img {
+    width: 200px;
+}
+
+.display-none {
+    display: none;
+}
+
+#loader-icon{
+	width: 200px;
+	aspect-ratio: 16 / 9;
+}
+
+.wp__icon-success.isAct{
+	display: none;
+}
+
+.wp__icon-success{
+	display: grid;
+	place-items: center;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 9999999;
+	background-color: rgba(0, 0, 0, .4);
+}
+
+#success-icon{
+	height: 250px;
+}
