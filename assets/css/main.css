@@ -16,43 +16,47 @@ body{
 .navbar{
     position: sticky;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 9999; 
     font-family: 'Be Vietnam Pro', sans-serif;
 }
 
-.container{
-    min-width: 100%;
-    height: 100vh;
+main{
+    width: 100%;
     background-color:var(--sec-color);
-    /*background-image: url('../img/bg-01.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    */
     font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+section{
+    padding-top: 45px;
+    width: 94%;
+    margin: auto;
+    position: relative;
+    min-height: 100vh;
 }
 
 .wrapper{
     display: flex;
-    width: 100%;
-    height: auto;
+    width: 94%;
     justify-content: center;
     font-family: 'Be Vietnam Pro', sans-serif;
-}
-
-.card-welcome{
-    padding: 25px;
-    width: 94%;
-    position: relative;
-    height: 200px;
-    background-image: url('../img/bg-01.png');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .wrapper-welcome{
     display: flex;
     width: 100%;
-    height: auto;
+}
+
+.card-welcome{
+    padding: 25px;
+    width: 94%;
+    margin: auto;
+    position: relative;
+    height: 200px;
+    background-image: url('../img/bg-01.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .image-welcome{
@@ -63,11 +67,9 @@ body{
 }
 
 .card{
-    top: 10px;
     padding: 30px;
-    margin: 20px;
     text-align: center;
-    width: 30%;
+    flex: 1;
 }
 
 .wrapper-info{
