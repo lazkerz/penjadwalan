@@ -8,7 +8,7 @@
                     <p class="font-semibold normal-case text-md text-gray-300 mb-4">Lorem ipsum dolor sit amet
                         consectetur,
                         adipisicing elit. Sequi reprehenderit.</p>
-                    <button class="btn btn-md bg-sky-700">
+                    <button class="btn btn-md bg-sky-700 border-white">
                         <p class="text-white text-sm">Cek Jadwal</p>
                     </button>
                 </div>
@@ -37,10 +37,10 @@
                 <img src="../assets/img/logo-icon.png" alt="Deskripsi Gambar" class="w-1/4 h-auto rounded-md">
                 <div class="mt-20 mr-auto">
                     <p class="font-semibold normal-case text-sm text-sky-650 mb-3">NPSN : </p>
-                    <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Bentuk Pendidikan : </p>
-                    <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Status : </p>
+                    <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Bentuk Pendidikan : SMK</p>
+                    <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Status : Negeri</p>
                     <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Alamat : </p>
-                    <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Kepala Sekolah : </p>
+                    <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Kepala Sekolah :</p>
                     <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Admin : </p>
                     <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Username : </p>
                 </div>

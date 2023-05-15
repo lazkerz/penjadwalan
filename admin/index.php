@@ -28,10 +28,10 @@ require '../lib/config.php';
           </svg>
         </label>
         <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-sky-50 rounded-box w-52">
-          <li><a href="index.php">Beranda</a></li>
-          <li><a href="index.php?hal=data-pengajar">Data Pengajar</a></li>
-          <li><a href="index.php?hal=data-jurusan">Data Jurusan</a></li>
-          <li><a href="index.php?hal=data-pelajaran">Data Pelajaran</a></li >
+          <li><a href="index.php" class="focus:bg-sky-500">Beranda</a></li>
+          <li><a href="index.php?hal=data-pengajar" class="focus:bg-sky-500">Data Pengajar</a></li>
+          <li><a href="index.php?hal=data-jurusan" class="focus:bg-sky-500">Data Jurusan</a></li>
+          <li><a href="index.php?hal=data-pelajaran" class="focus:bg-sky-500">Penjadwalan</a></li >
         </ul>
       </div>
     </div>
@@ -42,15 +42,6 @@ require '../lib/config.php';
       <div class="form-control">
         <input type="text" placeholder="Search" class="input input-bordered bg-sky-100" />
       </div>
-      <button class="btn btn-ghost btn-circle">
-        <div class="indicator">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-          </svg>
-          <span class="badge badge-xs badge-primary indicator-item"></span>
-        </div>
-      </button>
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
           <div class="w-10 rounded-full">
@@ -77,29 +68,29 @@ require '../lib/config.php';
 							if(@$_GET["aksi"]=="input"){
 								require_once "data-pengajar-input.php";
 							}else if(@$_GET["aksi"]=="edit"){
-								require_once "data-pengajar-edit.php";
+								require_once "dataPengajarEdit.php";
 							}else if(@$_GET["aksi"]=="delete"){
-								require_once "data-pengajar-delete.php";
+								require_once "dataPengajarDelete.php";
 							}else{
 								require_once "dataPengajar.php";
 							}
 						}else if($_GET["hal"] == "data-jurusan"){
 							if(@$_GET["aksi"]=="input"){
-								require_once "data-jurusan-input.php";
+								require_once "dataJurusanInput.php";
 							}else if(@$_GET["aksi"]=="edit"){
-								require_once "data-jurusan-edit.php";
+								require_once "dataJurusanEdit.php";
 							}else if(@$_GET["aksi"]=="delete"){
-								require_once "data-jurusan-delete.php";
+								require_once "dataJurusanDelete.php";
 							}else{
 								require_once "dataJurusan.php";
 							}
 						}else if($_GET["hal"] == "data-pelajaran"){
 							if(@$_GET["aksi"]=="input"){
-								require_once "data-pelajaran-input.php";
+								require_once "dataPelajaranInput.php";
 							}else if(@$_GET["aksi"]=="edit"){
-								require_once "data-pelajaran-edit.php";
+								require_once "dataPelajaranEdit.php";
 							}else if(@$_GET["aksi"]=="delete"){
-								require_once "data-pelajaran-delete.php";
+								require_once "dataPelajaranDelete.php";
 							}else{
 								require_once "dataPelajaran.php";
 							}
