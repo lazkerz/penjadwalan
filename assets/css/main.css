@@ -36,6 +36,14 @@ section{
     min-height: 100vh;
 }
 
+section .table{
+    font-size: .8rem;
+}
+
+section .table td{
+    padding: 0.5rem;
+}
+
 .wrapper{
     display: flex;
     width: 94%;

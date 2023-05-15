@@ -1,6 +1,9 @@
 <?php
 session_start();
+require '../lib/config.php';
+
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -10,6 +13,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dashboard | Admin</title>
   <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
