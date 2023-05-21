@@ -3,6 +3,7 @@
         <h3>Data Jurusan</h3>
     </div>
     <div class="overflow-x-auto mt-[50px]">
+    <a class="btn add" href="index.php?hal=data-jurusan&aksi=input">Tambah</a>
         <table class="table w-full">
             <thead>
                 <tr>
@@ -15,7 +16,7 @@
             <tbody>
                 <?php
                     $i = 1; 
-                    $select_querty = $config->query("SELECT * FROM tb_jurusan");
+                    $select_querty = $config2->query("SELECT * FROM jurusan_tav");
                     foreach ($select_querty as $row){
                 ?>
                 <tr>

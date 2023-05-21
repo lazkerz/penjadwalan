@@ -4,8 +4,13 @@ DEFINE("HOST", "localhost");
 DEFINE("USER", "root");
 DEFINE("PASS", "");
 DEFINE("DB", "db_jadwal");
-$config = new mysqli(HOST,USER,PASS,DB);
-if($config->connect_errno){
-	die("Koneksi Gagal : ". $config->connect_errno);
+DEFINE("DB2", "db_jurusan");
+$config1 = new mysqli(HOST,USER,PASS,DB);
+if($config1->connect_errno){
+	die("Koneksi Gagal : ". $config1->connect_errno);
+}
+$config2 = new mysqli(HOST,USER,PASS,DB2);
+if($config2->connect_errno){
+	die("Koneksi Gagal : ". $config2->connect_errno);
 }
 ?>

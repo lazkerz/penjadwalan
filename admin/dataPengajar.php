@@ -3,20 +3,21 @@
         <h3>Data Pengajar</h3>
     </div>
     <div class="overflow-x-auto mt-[50px]">
+    <a class="btn add" href="index.php?hal=data-pengajar&aksi=input">Tambah</a>
         <table class="table w-full">
             <!-- head -->
             <thead>
                 <tr>
                     <th>#</th>
                     <th>Kode Guru</th>
-                    <th>Nama</th>/
+                    <th>Nama</th>
                     <th class="text-center">Aksi</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                     $i = 1; 
-                    $select_querty = $config->query("SELECT * FROM tb_guru");
+                    $select_querty = $config1->query("SELECT * FROM tb_guru");
                     foreach ($select_querty as $row){
                 ?>
                 <tr>
