@@ -4,7 +4,7 @@ require "lib/config.php";
 if(isset($_POST['login_ok'])){
   $username = $_POST['username'];
   $password = $_POST['password'];
-  $sql= $config1->query("SELECT * FROM user WHERE user_admin = '$username' AND pass_admin = '$password'");
+  $sql= $config->query("SELECT * FROM user WHERE user_admin = '$username' AND pass_admin = '$password'");
     $row = $sql->fetch_assoc();
   if($sql->num_rows > 0){
     session_start();
