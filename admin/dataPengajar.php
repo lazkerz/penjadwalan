@@ -17,7 +17,7 @@
             <tbody>
                 <?php
                     $i = 1; 
-                    $select_querty = $config->query("SELECT * FROM tb_guru");
+                    $select_querty = $config1->query("SELECT * FROM tb_guru");
                     foreach ($select_querty as $row){
                 ?>
                 <tr>

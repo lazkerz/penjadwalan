@@ -3,6 +3,7 @@
         <h3>Data Jurusan</h3>
     </div>
     <div class="overflow-x-auto mt-[50px]">
+    <a class="btn add" href="index.php?hal=data-jurusan&aksi=input">Tambah</a>
         <table class="table w-full">
             <thead>
                 <tr>
