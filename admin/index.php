@@ -1,6 +1,6 @@
 <?php
 session_start();
-require '../lib/config.php';
+  require '../lib/config.php';
 
 ?>
 

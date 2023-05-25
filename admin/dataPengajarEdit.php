@@ -8,22 +8,18 @@
     $row = $edit->fetch_assoc();
     ?>
 
-    <form action="" method="POST">
-        <table border="1">
-            <tr>
-                <td>Kode Guru :<br><input type="text" name="kd_guru" value="<?php echo $row['kd_guru']; ?>" class="input-field"></td>
-            </tr>
-            <tr>
-                <td>Nama Guru :<br><input type="text" name="nama_guru" value="<?php echo $row['nama_guru']; ?>" class="input-field"></td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="submit" name="create" value="Edit" class="btn">
-                    <a href="index.php?hal=data-pengajar">Kembali</a>
-                </td>
-            </tr>
-        </table>
-    </form>
+    <div class="edit-wrapper">
+
+            <form class="form-control w-full" method="POST">
+            <h2 class="text-xl">Kode Guru</h2>
+                <input type="text" name="kd_guru" value="<?php echo $row['kd_guru']; ?>" class="input-field">
+            <h2>Nama Guru</h2>
+                <input type="text" name="nama_guru" value="<?php echo $row['nama_guru']; ?>" class="input-field">
+                <input type="submit" name="create" value="Edit" class="btn">
+                <a href="index.php?hal=data-pengajar">Kembali</a>
+            </form>
+
+    </div>
     <?php
     if (isset($_POST['create'])) {
         $id = $_GET['kdguru'];
