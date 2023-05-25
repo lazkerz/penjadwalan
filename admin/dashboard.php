@@ -5,12 +5,8 @@
                 <img src="../assets/img/icon-02.png" alt="Deskripsi Gambar" class="image-welcome">
                 <div class="mr-auto">
                     <h1 class="font-semibold normal-case text-4xl text-white mb-4">Halo, <?=$_SESSION['nama_admin'] ?></h1>
-                    <p class="font-semibold normal-case text-md text-gray-300 mb-4">Lorem ipsum dolor sit amet
-                        consectetur,
-                        adipisicing elit. Sequi reprehenderit.</p>
-                    <button class="btn btn-md bg-sky-700 border-white">
-                        <p class="text-white text-sm">Cek Jadwal</p>
-                    </button>
+                    <p class="font-semibold normal-case text-md text-gray-300 mb-4">Selamat Datang di Aplikasi Penjadwalan SMK Negeri 1 Lubuk Pakam</p>
+                    <a href="?hal=data-pelajaran" class="btn">Cek Jadwal</a>
                 </div>
             </div>
         </div>
@@ -26,7 +22,7 @@
         </div>
         <div class="card bg-sky-50  border border-sky-600 drop-shadow-lg">
             <p class="text-sm text-sky-600">JUMLAH GURU</p>
-            <p class="text-xl font-semibold text-sky-600">11</p>
+            <p class="text-xl font-semibold text-sky-600"><?=$total_guru ?></p>
         </div>
     </div>
 

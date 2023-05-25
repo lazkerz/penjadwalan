@@ -3,13 +3,14 @@
         <h3>Data Pengajar</h3>
     </div>
     <div class="overflow-x-auto mt-[50px]">
+        <div class="mb-[2rem]"><a class="btn add" href="index.php?hal=data-pengajar&aksi=input">Tambah</a></div>
         <table class="table w-full">
             <!-- head -->
             <thead>
                 <tr>
                     <th>#</th>
                     <th>Kode Guru</th>
-                    <th>Nama</th>/
+                    <th>Nama</th>
                     <th class="text-center">Aksi</th>
                 </tr>
             </thead>
@@ -25,8 +26,8 @@
                     <td><?=$row['nama_guru'] ?></td>
                     <td class="text-center">
                         <div class="flex items-center gap-5 justify-center">
-                            <a href="?hal=data-pengajar&aksi=edit&kdguru=<?= $row['kd_guru']; ?>" class="text-lg text-white bg-sky-500 hover:bg-sky-700 p-1"><i class='bx bxs-edit'></i></a>
-                            <a href="?hal=data-pengajar&aksi=delete&kdguru=<?= $row['kd_guru']; ?>"><i class='bx bx-message-square-x'></i></a>
+                            <a href="?hal=data-pengajar&aksi=edit&kdguru=<?= $row['kd_guru']; ?>" class="text-lg text-sky-500 rounded p-1"><i class='bx bxs-edit'></i></a>
+                            <a href="?hal=data-pengajar&aksi=delete&kdguru=<?= $row['kd_guru']; ?>" class="text-lg text-red-500 rounded p-1"><i class='bx bx-message-square-x'></i></a>
                         </div>
                     </td>
                 </tr>

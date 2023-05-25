@@ -1,6 +1,12 @@
 <?php
 session_start();
 require '../lib/config.php';
+require '../lib/func/mainFunc.php';
+
+$guru_query = $config->query("SELECT COUNT(tb_guru.kd_guru) AS total_guru FROM tb_guru");
+$get_rows = $guru_query->fetch_assoc();
+$total_guru = $get_rows['total_guru'];
+
 
 ?>
 
@@ -16,9 +22,48 @@ require '../lib/config.php';
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .ovy {
+      position: absolute;
+      display: none;
+      inset: 0;
+      background: rgba(0, 0, 0, .5);
+      z-index: 9999999;
+    }
+
+    .loading {
+      position: absolute;
+      left: 50%;
+      margin: auto;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      margin-top: 10px;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loading::after {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      border-top-color: #333;
+      animation: spin 1s linear infinite;
+      margin: 10px auto;
+    }
+  </style>
 </head>
 
-<body>
+<body id="body">
+<div class="ovy">
+        <div id="loading" class="loading"></div>
+    </div>
   <div class="navbar bg-sky-50 drop-shadow-lg flex">
     <div class="navbar-start">
       <div class="dropdown">
@@ -31,7 +76,7 @@ require '../lib/config.php';
           <li><a href="index.php" class="focus:bg-sky-500">Beranda</a></li>
           <li><a href="index.php?hal=data-pengajar" class="focus:bg-sky-500">Data Pengajar</a></li>
           <li><a href="index.php?hal=data-jurusan" class="focus:bg-sky-500">Data Jurusan</a></li>
-          <li><a href="index.php?hal=data-pelajaran" class="focus:bg-sky-500">Penjadwalan</a></li >
+          <li><a href="index.php?hal=data-pelajaran" class="focus:bg-sky-500">Penjadwalan</a></li>
         </ul>
       </div>
     </div>
@@ -55,56 +100,65 @@ require '../lib/config.php';
               <span class="badge">Update</span>
             </a>
           </li>
-          <li><a>Logout</a></li>
+          <li><a href="logout.php">Logout</a></li>
         </ul>
       </div>
     </div>
   </div>
 
   <main class="pb-20">
-  <?php 
-				if(isset($_GET["hal"])){
-					if($_GET['hal'] == "data-pengajar"){
-							if(@$_GET["aksi"]=="input"){
-								require_once "data-pengajar-input.php";
-							}else if(@$_GET["aksi"]=="edit"){
-								require_once "dataPengajarEdit.php";
-							}else if(@$_GET["aksi"]=="delete"){
-								require_once "dataPengajarDelete.php";
-							}else{
-								require_once "dataPengajar.php";
-							}
-						}else if($_GET["hal"] == "data-jurusan"){
-							if(@$_GET["aksi"]=="input"){
-								require_once "dataJurusanInput.php";
-							}else if(@$_GET["aksi"]=="edit"){
-								require_once "dataJurusanEdit.php";
-							}else if(@$_GET["aksi"]=="delete"){
-								require_once "dataJurusanDelete.php";
-							}else{
-								require_once "dataJurusan.php";
-							}
-						}else if($_GET["hal"] == "data-pelajaran"){
-							if(@$_GET["aksi"]=="input"){
-								require_once "dataPelajaranInput.php";
-							}else if(@$_GET["aksi"]=="edit"){
-								require_once "dataPelajaranEdit.php";
-							}else if(@$_GET["aksi"]=="delete"){
-								require_once "dataPelajaranDelete.php";
-							}else{
-								require_once "dataPelajaran.php";
-							}
-						}else{
-								require "dashboard.php";
-							}
-						}else{
-							require "dashboard.php";
-						}
-			?>
-    
+    <?php
+    if (isset($_GET["hal"])) {
+      if ($_GET['hal'] == "data-pengajar") {
+        if (@$_GET["aksi"] == "input") {
+          require_once "dataPengajarInput.php";
+        } else if (@$_GET["aksi"] == "edit") {
+          require_once "dataPengajarEdit.php";
+        } else if (@$_GET["aksi"] == "delete") {
+          require_once "dataPengajarDelete.php";
+        } else {
+          require_once "dataPengajar.php";
+        }
+      } else if ($_GET["hal"] == "data-jurusan") {
+        if (@$_GET["aksi"] == "input") {
+          require_once "dataJurusanInput.php";
+        } else if (@$_GET["aksi"] == "edit") {
+          require_once "dataJurusanEdit.php";
+        } else if (@$_GET["aksi"] == "delete") {
+          require_once "dataJurusanDelete.php";
+        } else {
+          require_once "dataJurusan.php";
+        }
+      } else if ($_GET["hal"] == "data-pelajaran") {
+        if (@$_GET["aksi"] == "input") {
+          require_once "dataPelajaranInput.php";
+        } else if (@$_GET["aksi"] == "edit") {
+          require_once "dataPelajaranEdit.php";
+        } else if (@$_GET["aksi"] == "delete") {
+          require_once "dataPelajaranDelete.php";
+        } else {
+          require_once "dataPelajaran.php";
+        }
+      } else {
+        require "dashboard.php";
+      }
+    } else {
+      require "dashboard.php";
+    }
+    ?>
+
   </main>
 
+  <script>
+    function showLoading() {
+      var button = document.getElementById('generateButton');
+      var loading = document.getElementById('loading');
+      const ovy = document.querySelector('.ovy');
 
+      button.style.display = 'none';
+      ovy.style.display = 'block';
+    }
+  </script>
 </body>
 
 </html>
