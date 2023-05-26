@@ -16,7 +16,7 @@
             <tbody>
                 <?php
                     $i = 1; 
-                    $select_querty = $config2->query("SELECT * FROM jurusan_tav");
+                    $select_querty = $config2->query("SELECT * FROM jurusan_ta");
                     foreach ($select_querty as $row){
                 ?>
                 <tr>
