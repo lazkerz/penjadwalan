@@ -5,10 +5,8 @@ $row = $edit->fetch_assoc();
 ?>
 
 <section>
-    <div>
-        <h3 class="text-xl text-center font-semibold text-[#6C6CE8]">Edit Data Jurusan</h3>
-    </div>
-	<div class="bg-[#DED7FF] border border-[#6C6CE8] mt-[20px] p-[3rem] d-flex w-[50%] rounded-lg m-auto shadow-lg">
+	<div class="bg-[#DED7FF] border border-[#6C6CE8] mt-[20px] p-[2rem] d-flex w-[50%] rounded-lg m-auto shadow-lg">
+	<h3 class="text-xl text-center font-semibold text-[#6C6CE8] mb-8">Edit Data Jurusan</h3>
 		<form action="" method="POST">
 			<div class="flex flex-col">
 				<div class="flex flex-col gap-2 mb-[1rem]">

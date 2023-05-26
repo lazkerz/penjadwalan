@@ -1,36 +1,33 @@
 <section>
-	<div class="text-center">
-		<h3 class="text-xl font-semibold text-sky-600">Tambah Data Pengajar</h3>
-	</div>
-	<div class="bg-white mt-[50px] p-[3rem] d-flex w-[50%] rounded-lg m-auto">
+	<div class="bg-[#D5F7E6] border border-[#64CAA5] mt-[20px] p-[2rem] d-flex w-[50%] rounded-lg m-auto shadow-lg">
+	<h3 class="text-xl text-center font-semibold text-[#64CAA5] mb-8">Tambah Data Pengajar</h3>
 		<form action="" method="POST">
 			<div class="flex flex-col">
 				<div class="flex flex-col gap-2 mb-[1rem]">
-					<span>Kode Guru</span>
+					<span class="text-[#64CAA5]">Kode Guru</span>
 					<input type="text" name="kd_guru" placeholder="Type here" class="input input-bordered w-full bg-slate-50" />
 				</div>
 				<div class="flex flex-col gap-2 mb-[2rem]">
-					<span>Nama Guru</span>
-					<input type="text" name="nama_guru" placeholder="Type here" class="input input-bordered w-full bg-slate-50" />
+					<span class="text-[#64CAA5]">Nama Guru</span>
+                    <input type="text" name="nama_guru" placeholder="Type here" class="input input-bordered w-full bg-slate-50">
 				</div>
 				<div class="flex items-center gap-2 mt-3">
 					<input type="submit" name="create" value="Tambah" class="btn bg-slate-950">
-					<a href="index.php?hal=data-pengajar" class="btn bg-slate-200 border-0">Kembali</a>
+					<a href="index.php?hal=data-pengajar" class="btn btn-ghost border-0 text-[#64CAA5]">Kembali</a>
 				</div>
 			</div>
 		</form>
-	</div>
 
 
 	<?php
-	if (isset($_POST['create'])) {
-		$kd_guru = $_POST['kd_guru'];
-		$nama_guru = $_POST['nama_guru'];
+if(isset($_POST['create'])){
+	$kd_guru = $_POST['kd_guru'];
+	$nama_guru = $_POST['nama_guru'];
 
-		$res = $config->query("INSERT INTO tb_guru VALUES('$kd_guru', '$nama_guru')");
-		if ($res) {
+	$res = $config->query("INSERT INTO tb_guru VALUES('$kd_guru', '$nama_guru')");
+		if($res){
 			echo "<script>alert('Data berhasil ditambahkan!');document.location.href='index.php?hal=data-pengajar';</script>";
-		} else {
+		} else{
 			echo "<script>alert('Gagal menambahkan data!');document.location.href='index.php?hal=data-pengajar';</script>";
 		}
 	}

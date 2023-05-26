@@ -1,6 +1,5 @@
 <section>
     <div>
-        <h3 class="text-xl text-center font-semibold text-[#64CAA5]">Edit Data Pengajar</h3>
     </div>
     <?php
     $id = $_GET['kdguru'];
@@ -8,7 +7,8 @@
     $row = $edit->fetch_assoc();
     ?>
 
-<div class="bg-[#D5F7E6] border border-[#64CAA5] mt-[20px] p-[3rem] d-flex w-[50%] rounded-lg m-auto shadow-lg">
+<div class="bg-[#D5F7E6] border border-[#64CAA5] mt-[20px] p-[2rem] d-flex w-[50%] rounded-lg m-auto shadow-lg">
+<h3 class="text-xl text-center font-semibold text-[#64CAA5] mb-8">Edit Data Pengajar</h3>
 		<form action="" method="POST">
 			<div class="flex flex-col">
 				<div class="flex flex-col gap-2 mb-[1rem]">
