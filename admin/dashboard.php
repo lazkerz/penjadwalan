@@ -40,48 +40,33 @@
                     <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Alamat : </p>
                     <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Kepala Sekolah :</p>
                     <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Admin : </p>
-                    <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Username : </p>
+                    <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Username : <?=$_SESSION['nama_admin'] ?></p>
                 </div>
             </div>
         </div>
 
         <div class="card-guru bg-[#D5F7E6] border border-[#64CAA5] rounded-xl drop-shadow-lg">
             <h1 class="text-center font-semibold normal-case text-2xl text-[#64CAA5] mb-8">Daftar Pengajar</h1>
+            <?php
+                    $i = 1; 
+                    $select_querty = $config->query("SELECT * FROM tb_guru LIMIT 3");
+                    foreach ($select_querty as $row){
+                ?>
             <ul class="list-none mb-4 border border-[#64CAA5] p-2">
                 <li class="flex">
                     <img src="../assets/img/logo-icon.png" alt="Gambar Anda" class="w-14 h-13 rounded-full mr-4">
                     <div class="flex flex-col">
-                        <p class="font-semibold normal-case text-md text-[#64CAA5]">Suwardi</p>
-                        <p class="font-medium normal-case text-sm text-[#64CAA5]">Guru Matematika</p>
+                        <p class="font-semibold normal-case text-md text-[#64CAA5]"><?=$row['nama_guru'] ?></p>
+                        <p class="font-medium normal-case text-sm text-[#64CAA5]">Kode Guru : <?=$row['kd_guru'] ?></p>
                     </div>
                 </li>
             </ul>
-
-
-            <ul class="list-none mb-4 border border-[#64CAA5] p-2">
-                <li class="flex">
-                    <img src="../assets/img/logo-icon.png" alt="Gambar Anda" class="w-14 h-13 rounded-full mr-4">
-                    <div class="flex flex-col">
-                        <p class="font-semibold normal-case text-md text-[#64CAA5]">Riska</p>
-                        <p class="font-medium normal-case text-sm text-[#64CAA5]">Guru Agama</p>
-                    </div>
-                </li>
-            </ul>
-
-            <ul class="list-none mb-4 border border-[#64CAA5] p-2">
-                <li class="flex">
-                    <img src="../assets/img/logo-icon.png" alt="Gambar Anda" class="w-14 h-13 rounded-full mr-4">
-                    <div class="flex flex-col">
-                        <p class="font-semibold normal-case text-md text-[#64CAA5]">Budi</p>
-                        <p class="font-medium normal-case text-sm text-[#64CAA5]">Guru </p>
-                    </div>
-                </li>
-            </ul>
+            <?php } ?>
 
             <ul>
                 <li>
                     <div class="flex flex-row-reverse items-start ml-4 text-[#64CAA5]">
-                        <a class="link">See More ></a>
+                        <a class="link" href="index.php?hal=data-pengajar">See More ></a>
                 </li>
             </ul>
         </div>

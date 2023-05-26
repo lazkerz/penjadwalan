@@ -7,7 +7,6 @@ $guru_query = $config->query("SELECT COUNT(tb_guru.kd_guru) AS total_guru FROM t
 $get_rows = $guru_query->fetch_assoc();
 $total_guru = $get_rows['total_guru'];
 
-
 ?>
 
 
