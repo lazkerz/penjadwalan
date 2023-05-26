@@ -113,8 +113,14 @@ if (isset($_POST['generate'])) {
                 </table>
             <?php endif; ?>
         </div>
+        <div class="mb-[50px]"></div>
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if (isset($_POST['generate'])) {
+                require '../lib/generate.php';
+            }
+        }
 
-
+        ?>
     </div>
-
 </section>
