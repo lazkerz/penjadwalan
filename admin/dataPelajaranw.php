@@ -24,7 +24,7 @@ $subjects = ['Kode Guru', 'Nama Guru', 'Mapel'];
             </form>
         </div>
         <div class="mt-[50px] overflow-x-auto">
-            <table border="1" class="table w-full p-5">
+            <table class="table w-full bordered border-2 p-5">
                 <thead>
                     <tr>
                         <th rowspan="2">Hari</th>

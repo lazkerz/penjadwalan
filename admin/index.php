@@ -84,9 +84,6 @@ $total_guru = $get_rows['total_guru'];
       <a class="font-semibold normal-case text-2xl text-sky-600">Penjadwalan Mata Pelajaran</a>
     </div>
     <div class="navbar-end">
-      <div class="form-control">
-        <input type="text" placeholder="Search" class="input input-bordered bg-sky-100" />
-      </div>
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle avatar">
           <div class="w-10 rounded-full">

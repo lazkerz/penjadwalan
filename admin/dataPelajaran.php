@@ -16,13 +16,12 @@ if (isset($_POST['generate'])) {
 
 <section>
     <div>
-        <h3 class="text-xl text-sky-600 font-bold">Data Pelajaran</h3>
-    </div>
-
-    <div class="overflow-x-auto mt-[50px]">
+        <h3 class="text-xl text-sky-600 font-bold mb-3">Data Pelajaran</h3>
         <form method="post" onsubmit="showLoading()">
-            <button type="submit" name="generate" id="generateButton" class="btn">Generate Jadwal</button>
+            <button type="submit" name="generate" id="generateButton" class="btn bg-sky-50 text-sky-600 border border-sky-600">Generate Jadwal</button>
         </form>
+    </div>
+    <div class="overflow-x-auto">
         <!-- XI TAV 1 -->
         <div class="mt-[20px] flex overflow-x-auto gap-4 p-3">
             <?php if (isset($xitav1jadwal)): ?>                

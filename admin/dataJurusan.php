@@ -1,7 +1,7 @@
 <section>
     <div>
         <h3 class="text-xl text-[#6C6CE8] font-bold mb-3">Data Jurusan</h3>
-        <a class="btn bg-[#DED7FF] border border-[#6C6CE8] text-[#6C6CE8]" href="index.php?hal=data-pengajar&aksi=input">Tambah</a>
+        <a class="btn bg-[#DED7FF] border border-[#6C6CE8] text-[#6C6CE8]" href="index.php?hal=data-jurusan&aksi=input">Tambah</a>
     </div>
     <div class="overflow-x-auto mt-[50px]">
         <table class="table w-full">
