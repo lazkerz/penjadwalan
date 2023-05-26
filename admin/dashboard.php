@@ -20,7 +20,7 @@
             <p class="text-sm text-[#64CAA5]">SEMESTER</p>
             <p class="text-xl font-semibold text-[#64CAA5]">GENAP</p>
         </div>
-        <div class="card bg-sky-50  border border-sky-600 drop-shadow-lg">
+        <div class="card bg-sky-50 border border-sky-600 drop-shadow-lg">
             <p class="text-sm text-sky-600">JUMLAH GURU</p>
             <p class="text-xl font-semibold text-sky-600"><?=$total_guru ?></p>
         </div>

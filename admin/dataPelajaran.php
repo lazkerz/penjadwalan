@@ -16,7 +16,7 @@ if (isset($_POST['generate'])) {
 
 <section>
     <div>
-        <h3>Data Pelajaran</h3>
+        <h3 class="text-xl text-sky-600 font-bold">Data Pelajaran</h3>
     </div>
 
     <div class="overflow-x-auto mt-[50px]">

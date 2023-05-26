@@ -1,9 +1,9 @@
 <section>
     <div>
-        <h3>Data Pengajar</h3>
+        <h3 class="text-xl text-[#64CAA5] font-bold mb-3">Data Pengajar</h3>
+        <a class="btn bg-[#D5F7E6] border border-[#64CAA5] text-[#64CAA5]" href="index.php?hal=data-pengajar&aksi=input">Tambah</a>
     </div>
-    <div class="overflow-x-auto mt-[50px]">
-        <div class="mb-[2rem]"><a class="btn add" href="index.php?hal=data-pengajar&aksi=input">Tambah</a></div>
+    <div class="overflow-x-auto mt-[10px]">
         <table class="table w-full">
             <!-- head -->
             <thead>
