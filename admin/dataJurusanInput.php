@@ -1,23 +1,23 @@
 <section>
-    <div>
-    <h3>Tambah Data Jurusan</h3>
-    </div>
-    <form action="" method="POST">
-        <table class="tb-create">
-        <tr>
-			<td>Kode Jurusan :<br><input type="text" name="kd_jurusan" class="input-field"></td>
-		</tr>
-		<tr>
-			<td>Nama Jurusan :<br><input type="text" name="nama_jurusan" class="input-field"></td>
-		</tr>
-		<tr>
-			<td>
-				<input type="submit" name="create" value="Tambah" class="btn">
-				<a href="index.php?hal=data-jurusan">Kembali</a>
-			</td>
-		</tr>
-        </table>
-    </form>
+	<div class="bg-[#DED7FF] border border-[#6C6CE8] mt-[20px] p-[2rem] d-flex w-[50%] rounded-lg m-auto shadow-lg">
+	<h3 class="text-xl text-center font-semibold text-[#6C6CE8]">Tambah Data Jurusan</h3>
+		<form action="" method="POST">
+			<div class="flex flex-col">
+				<div class="flex flex-col gap-2 mb-[1rem]">
+					<span class="text-[#6C6CE8]">Kode Jurusan</span>
+					<input type="text" name="kd_jurusan" value="<?php echo $row['kd_jurusan']; ?>" class="input input-bordered w-full bg-slate-50" />
+				</div>
+				<div class="flex flex-col gap-2 mb-[2rem]">
+					<span class="text-[#6C6CE8]">Nama Jurusan</span>
+					<input type="text" name="nama_jurusan" value="<?php echo $row['nama_jurusan']; ?>" class="input input-bordered w-full bg-slate-50" />
+				</div>
+				<div class="flex items-center gap-2 mt-3">
+					<input type="submit" name="create" value="Tambah" class="btn bg-slate-950">
+					<a href="index.php?hal=data-jurusan" class="btn btn-ghost border-0 text-[#6C6CE8]">Kembali</a>
+				</div>
+			</div>
+		</form>
+	</div>
 <?php
 if(isset($_POST['create'])){
 $kd_jurusan = $_POST['kd_jurusan'];
