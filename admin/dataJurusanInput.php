@@ -5,11 +5,11 @@
 			<div class="flex flex-col">
 				<div class="flex flex-col gap-2 mb-[1rem]">
 					<span class="text-[#6C6CE8]">Kode Jurusan</span>
-					<input type="text" name="kd_jurusan" value="<?php echo $row['kd_jurusan']; ?>" class="input input-bordered w-full bg-slate-50" />
+					<input type="text" name="kd_jurusan" placeholder="Type here" class="input input-bordered w-full bg-slate-50" />
 				</div>
 				<div class="flex flex-col gap-2 mb-[2rem]">
 					<span class="text-[#6C6CE8]">Nama Jurusan</span>
-					<input type="text" name="nama_jurusan" value="<?php echo $row['nama_jurusan']; ?>" class="input input-bordered w-full bg-slate-50" />
+					<input type="text" name="nama_jurusan" placeholder="Type here" class="input input-bordered w-full bg-slate-50" />
 				</div>
 				<div class="flex items-center gap-2 mt-3">
 					<input type="submit" name="create" value="Tambah" class="btn bg-slate-950">
