@@ -9,6 +9,8 @@ if(isset($_POST['login_ok'])){
   if($sql->num_rows > 0){
     session_start();
     $_SESSION['nama_admin'] = $row['nama_admin'];
+    $_SESSION['id_admin'] = $row['id_admin'];
+    $_SESSION['user_admin'] = $row['user_admin'];
     header('location:index.php?success');
   } else{
     header('location:index.php?error');
@@ -75,7 +77,7 @@ if(isset($_POST['login_ok'])){
               ";
             }
            ?>
-           <span class='error_msg p-2 rounded-3' id="error_msg">Username atau password yang anda masukan salah!</span>
+           <span class='error_msg p-2 rounded-3' id="error_msg">Username atau password yang anda masukan salah!!</span>
         </div>
         <p class="text-center">&copy;Copyright 2023</p>
       </form>
