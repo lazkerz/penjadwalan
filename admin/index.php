@@ -91,7 +91,7 @@ $total_guru = $get_rows['total_guru'];
         </label>
         <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-sky-50 rounded-box w-52">
           <li>
-            <a class="justify-between">
+            <a href="update.php" class="justify-between">
               Profile
               <span class="badge">Update</span>
             </a>

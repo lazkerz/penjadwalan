@@ -40,7 +40,7 @@
                     <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Alamat : </p>
                     <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Kepala Sekolah :</p>
                     <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Admin : </p>
-                    <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Username : <?=$_SESSION['nama_admin'] ?></p>
+                    <p class="font-semibold normal-case text-sm text-sky-650 mb-3">Username : <?=$_SESSION['user_admin'] ?></p>
                 </div>
             </div>
         </div>
