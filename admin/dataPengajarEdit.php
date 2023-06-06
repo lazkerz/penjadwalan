@@ -1,6 +1,4 @@
 <section>
-    <div>
-    </div>
     <?php
     $id = $_GET['kdguru'];
     $edit = $config->query("SELECT * FROM tb_guru WHERE kd_guru='$id'");
