@@ -7,7 +7,10 @@ $guru_query = $config->query("SELECT COUNT(tb_guru.kd_guru) AS total_guru FROM t
 $get_rows = $guru_query->fetch_assoc();
 $total_guru = $get_rows['total_guru'];
 
-
+$profile = $config->query("SELECT * FROM user");
+$row = $profile->fetch_assoc();
+$user = $row['user_admin'];
+$pass = $row['pass_admin'];
 ?>
 
 
@@ -62,7 +65,7 @@ $total_guru = $get_rows['total_guru'];
 
 <body id="body">
 <div class="ovy">
-        <div id="loading" class="loading"></div>
+        <div id="loading" class="loading loading-ball loading-lg"></div>
     </div>
   <div class="navbar bg-sky-50 drop-shadow-lg flex">
     <div class="navbar-start">
@@ -92,12 +95,12 @@ $total_guru = $get_rows['total_guru'];
         </label>
         <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-sky-50 rounded-box w-52">
           <li>
-            <a class="justify-between">
+            <a href="index.php?hal=profile" class="justify-between focus:bg-sky-500">
               Profile
               <span class="badge">Update</span>
             </a>
           </li>
-          <li><a href="logout.php">Logout</a></li>
+          <li><a href="logout.php" class="focus:bg-sky-500">Logout</a></li>
         </ul>
       </div>
     </div>
@@ -135,6 +138,12 @@ $total_guru = $get_rows['total_guru'];
           require_once "dataPelajaranDelete.php";
         } else {
           require_once "dataPelajaran.php";
+        }
+      } else if ($_GET["hal"] == "profile") {
+        if (@$_GET["aksi"] == "edit") {
+          require_once "update.php";
+        } else {
+          require_once "profile.php";
         }
       } else {
         require "dashboard.php";

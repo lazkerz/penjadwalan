@@ -77,7 +77,7 @@ if(isset($_POST['login_ok'])){
            ?>
            <span class='error_msg p-2 rounded-3' id="error_msg">Username atau password yang anda masukan salah!</span>
         </div>
-        <p class="text-center">&copy;Copyright 2023</p>
+        <p class="text-center">&copy;Neuron 2023</p>
       </form>
     </div>
 
