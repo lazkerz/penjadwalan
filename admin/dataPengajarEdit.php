@@ -18,7 +18,7 @@
                     <input type="text" name="nama_guru" value="<?php echo $row['nama_guru']; ?>" class="input input-bordered w-full bg-slate-50">
 				</div>
 				<div class="flex items-center gap-2 mt-3">
-					<input type="submit" name="create" value="Edit" class="btn bg-slate-950">
+					<input type="submit" name="create" value="Edit" class="btn bg-[#D5F7E6] border-[#64CAA5] text-[#64CAA5]">
 					<a href="index.php?hal=data-pengajar" class="btn btn-ghost border-0 text-[#64CAA5]">Kembali</a>
 				</div>
 			</div>

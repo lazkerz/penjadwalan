@@ -4,7 +4,7 @@
             <div class="flex flex-row-reverse items-start ml-4">
                 <img src="../assets/img/icon-02.png" alt="Deskripsi Gambar" class="image-welcome">
                 <div class="mr-auto">
-                    <h1 class="font-semibold normal-case text-3xl text-white mb-4">Halo, <?=$_SESSION['nama_admin'] ?></h1>
+                    <h1 class="font-semibold normal-case text-3xl text-white mb-4">Halo, <?=$row['nama_admin']; ?></h1>
                     <p class="font-semibold normal-case text-md text-gray-300 mb-4">Lorem ipsum dolor sit amet
                         consectetur,
                         adipisicing elit. Sequi reprehenderit.</p>
@@ -39,7 +39,7 @@
                     <p class="normal-case text-sm text-sky-600 mb-3">Status : <span class="font-bold">Negeri</span></p>
                     <p class="normal-case text-sm text-sky-600 mb-3">Alamat : </p>
                     <p class="normal-case text-sm text-sky-600 mb-3">Kepala Sekolah :</p>
-                    <p class="normal-case text-sm text-sky-600 mb-3">Admin : <span class="font-bold"><?=$_SESSION['nama_admin'] ?></span></p>
+                    <p class="normal-case text-sm text-sky-600 mb-3">Admin : <span class="font-bold"><?=$row['nama_admin']; ?></span></p>
                     <p class="normal-case text-sm text-sky-600 mb-3">Username : <span class="font-bold"><?= $user ?></span></p>
                 </div>
             </div>
