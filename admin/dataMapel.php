@@ -26,7 +26,7 @@
                     <td><?=$row['nama_pelajaran'] ?></td>
                     <td class="text-center">
                         <div class="flex items-center gap-5 justify-center">
-                            <a href="?hal=data-mapel&aksi=edit&kd_mapel=<?= $row['kd_mapel']; ?>" class="i-btn btn-ed"><i class='bx bxs-edit'></i></a>
+                            <a href="?hal=data-mapel&aksi=edit&kdmapel=<?= $row['kd_mapel']; ?>" class="i-btn btn-ed"><i class='bx bxs-edit'></i></a>
                             <a href="?hal=data-mapel&aksi=delete&kd_mapel=<?= $row['kd_mapel']; ?>" class="i-btn btn-del"><i class='bx bx-message-square-x'></i></a>
                         </div>
                     </td>
