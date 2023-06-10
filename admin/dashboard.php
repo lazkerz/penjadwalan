@@ -37,7 +37,7 @@
                     <p class="normal-case text-sm text-sky-600 mb-3">Status : <span class="font-bold">Negeri</span></p>
                     <p class="normal-case text-sm text-sky-600 mb-3">Alamat : <span class="font-bold">GALANG LUBUK PAKAM</span></p>
                     <p class="normal-case text-sm text-sky-600 mb-3">Kepala Sekolah :</p>
-                    <p class="normal-case text-sm text-sky-600 mb-3">Admin : <span class="font-bold"><?=$_SESSION['nama_admin'] ?></span></p>
+                    <p class="normal-case text-sm text-sky-600 mb-3">Admin : <span class="font-bold"><?=$row['nama_admin']; ?></span></p>
                     <p class="normal-case text-sm text-sky-600 mb-3">Username : <span class="font-bold"><?= $user ?></span></p>
                 </div>
             </div>

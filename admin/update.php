@@ -1,3 +1,9 @@
+<?php
+$id = $_GET['idadmin'];
+$edit = $config->query("SELECT * FROM user WHERE id_admin='$id'");
+$row = $edit->fetch_assoc();
+?>
+
 <section>
 <div class="bg-sky-50 border border-sky-600 mt-[20px] p-[2rem] d-flex w-[30%] rounded-lg m-auto shadow-lg">
 <h3 class="text-xl text-center font-semibold text-sky-600 mb-8">Edit Profil</h3>
@@ -5,7 +11,7 @@
 			<div class="flex flex-col">
 				<div class="flex flex-col gap-2 mb-[1rem]">
 					<span class="text-sky-600">Nama Admin</span>
-                    <input type="text" name="nama_admin" value="<?=$_SESSION['nama_admin']; ?>" class="input input-bordered w-full bg-slate-50" >
+                    <input type="text" name="nama_admin" value="<?php echo $row['nama_admin']; ?>" class="input input-bordered w-full bg-slate-50" >
 				</div>
 				<div class="flex flex-col gap-2 mb-[2rem]">
 					<span class="text-sky-600">User Admin</span>
@@ -16,7 +22,7 @@
                     <input type="text" name="pass_admin" value="<?php echo $row['pass_admin']; ?>" class="input input-bordered w-full bg-slate-50">
 				</div>
 				<div class="flex items-center gap-2 mt-3">
-					<input type="submit" name="create" value="Save" class="btn bg-sky-50 border border-sky-600 text-sky-600" ">
+					<input type="submit" name="create" value="Save" class="btn bg-sky-50 border border-sky-600 text-sky-600">
 					<a href="index.php?hal=profile" class="btn btn-ghost border-0 text-sky-600">Kembali</a>
 				</div>
 			</div>
@@ -25,11 +31,12 @@
 
     <?php
     if (isset($_POST['create'])) {
-        $nama_admin = $_POST['nama_admin'];
+        $id = $_GET['idadmin'];
+		$nama = $_POST['nama_admin'];
 		$user = $_POST['user_admin'];
         $pass = $_POST['pass_admin'];
 
-        $res = $config->query("UPDATE user SET nama_admin = '$nama_admin', user_admin = '$user', pass_admin = '$pass' WHERE user.nama_admin = '$nama_admin'");
+        $res = $config->query("UPDATE user SET nama_admin = '$nama', user_admin = '$user', pass_admin = '$pass' WHERE user.id_admin = '$id'");
         if ($res) {
             echo "<script>alert('Update data berhasil!');document.location.href='index.php?hal=profile';</script>";
         } else {
