@@ -13,11 +13,11 @@ $row = $edit->fetch_assoc();
 			<div class="flex flex-col">
 				<div class="flex flex-col gap-2 mb-[1rem]">
 					<span class="text-[#64CAA5]">Kode Mapel</span>
-                    <input type="text" name="kd_guru" value="<?php echo $row['kd_mapel']; ?>" class="input input-bordered w-full bg-slate-50" >
+                    <input type="text" name="kd_mapel' value="<?php echo $row['kd_mapel']; ?>" class="input input-bordered w-full bg-slate-50" >
 				</div>
 				<div class="flex flex-col gap-2 mb-[2rem]">
 					<span class="text-[#64CAA5]">Nama Pelajaran</span>
-                    <input type="text" name="nama_guru" value="<?php echo $row['nama_pelajaran']; ?>" class="input input-bordered w-full bg-slate-50">
+                    <input type="text" name="nama_pelajaran" value="<?php echo $row['nama_pelajaran']; ?>" class="input input-bordered w-full bg-slate-50">
 				</div>
 				<div class="flex items-center gap-2 mt-3">
 					<input type="submit" name="create" value="Edit" class="btn bg-[#D5F7E6] border-[#64CAA5] text-[#64CAA5]">
