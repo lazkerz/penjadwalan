@@ -5,9 +5,7 @@
                 <img src="../assets/img/icon-02.png" alt="Deskripsi Gambar" class="image-welcome">
                 <div class="mr-auto">
                     <h1 class="font-semibold normal-case text-3xl text-white mb-4">Halo, <?=$_SESSION['nama_admin'] ?></h1>
-                    <p class="font-semibold normal-case text-md text-gray-300 mb-4">Lorem ipsum dolor sit amet
-                        consectetur,
-                        adipisicing elit. Sequi reprehenderit.</p>
+                    <p class="font-semibold normal-case text-md text-gray-300 mb-4">Selamat datang di Website Penjadwalan SMKN 1 Lubuk Pakam</p>
                         <a href="index.php?hal=data-pelajaran" class="btn btn-md bg-sky-700 border-white text-white focus:bg-sky-500">Cek Jadwal</a>                    
                 </div>
             </div>
@@ -34,10 +32,10 @@
             <div class="flex flex-row-reverse items-start ml-4">
                 <img src="../assets/img/logo-icon.png" alt="Deskripsi Gambar" class="w-1/4 h-auto rounded-md">
                 <div class="mt-20 mr-auto">
-                    <p class="normal-case text-sm text-sky-600 mb-3">NPSN : </p>
+                    <p class="normal-case text-sm text-sky-600 mb-3">NPSN : <span class="font-bold">10214027</span></p>
                     <p class="normal-case text-sm text-sky-600 mb-3">Bentuk Pendidikan : <span class="font-bold">SMK</span></p>
                     <p class="normal-case text-sm text-sky-600 mb-3">Status : <span class="font-bold">Negeri</span></p>
-                    <p class="normal-case text-sm text-sky-600 mb-3">Alamat : </p>
+                    <p class="normal-case text-sm text-sky-600 mb-3">Alamat : <span class="font-bold">GALANG LUBUK PAKAM</span></p>
                     <p class="normal-case text-sm text-sky-600 mb-3">Kepala Sekolah :</p>
                     <p class="normal-case text-sm text-sky-600 mb-3">Admin : <span class="font-bold"><?=$_SESSION['nama_admin'] ?></span></p>
                     <p class="normal-case text-sm text-sky-600 mb-3">Username : <span class="font-bold"><?= $user ?></span></p>

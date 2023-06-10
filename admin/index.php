@@ -25,6 +25,7 @@ $pass = $row['pass_admin'];
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
   <style>
     .ovy {
       position: absolute;
@@ -64,9 +65,9 @@ $pass = $row['pass_admin'];
 </head>
 
 <body id="body">
-<div class="ovy">
-        <div id="loading" class="loading loading-ball loading-lg"></div>
-    </div>
+  <div class="ovy">
+    <div id="loading" class="loading loading-ball loading-lg"></div>
+  </div>
   <div class="navbar bg-sky-50 drop-shadow-lg flex">
     <div class="navbar-start">
       <div class="dropdown">
@@ -79,7 +80,8 @@ $pass = $row['pass_admin'];
           <li><a href="index.php" class="focus:bg-sky-500">Beranda</a></li>
           <li><a href="index.php?hal=data-pengajar" class="focus:bg-sky-500">Data Pengajar</a></li>
           <li><a href="index.php?hal=data-jurusan" class="focus:bg-sky-500">Data Jurusan</a></li>
-          <li><a href="index.php?hal=data-pelajaran" class="focus:bg-sky-500">Penjadwalan</a></li>
+          <li><a href="index.php?hal=data-mapel" class="focus:bg-sky-500">Data Mapel</a></li>
+          <li><a href="index.php?hal=data-penjadwalan" class="focus:bg-sky-500">Penjadwalan</a></li>
         </ul>
       </div>
     </div>
@@ -129,16 +131,18 @@ $pass = $row['pass_admin'];
         } else {
           require_once "dataJurusan.php";
         }
-      } else if ($_GET["hal"] == "data-pelajaran") {
+      }else if ($_GET["hal"] == "data-mapel") {
         if (@$_GET["aksi"] == "input") {
-          require_once "dataPelajaranInput.php";
+          require_once "dataMapelInput.php";
         } else if (@$_GET["aksi"] == "edit") {
-          require_once "dataPelajaranEdit.php";
+          require_once "dataMapelEdit.php";
         } else if (@$_GET["aksi"] == "delete") {
-          require_once "dataPelajaranDelete.php";
+          require_once "dataMapelDelete.php";
         } else {
-          require_once "dataPelajaran.php";
+          require_once "dataMapel.php";
         }
+      } else if ($_GET["hal"] == "data-penjadwalan") {
+        require_once 'dataPenjadwalan.php';
       } else if ($_GET["hal"] == "profile") {
         if (@$_GET["aksi"] == "edit") {
           require_once "update.php";
@@ -154,8 +158,12 @@ $pass = $row['pass_admin'];
     ?>
 
   </main>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
   <script>
+    $(document).ready(function () {
+      $('#example').DataTable();
+    });
     function showLoading() {
       var button = document.getElementById('generateButton');
       var loading = document.getElementById('loading');

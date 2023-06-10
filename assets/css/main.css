@@ -102,6 +102,41 @@ section .table td{
     text-transform: none !important; 
 }
 
+section .i-btn{
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: .1s;
+}
+
+section .i-btn.btn-ed{
+    background-color: #ddedfc;
+    color: #6bb2ef;
+}
+
+section .i-btn.btn-ed:hover{
+    background-color: #4894e9;
+    color: #fff;
+}
+
+section .i-btn.btn-del{
+    background-color: #fce4e4;
+    color: #f07371;
+}
+
+section .i-btn.btn-del:hover{
+    background-color: #e64f4d;
+    color: #fff;
+}
+
+section .tb-gen th,
+section .tb-gen td{
+    padding: 8px 12px;
+}
+
+section .tb-gen tr{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 
 
 

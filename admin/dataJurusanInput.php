@@ -23,7 +23,7 @@ if(isset($_POST['create'])){
 $kd_jurusan = $_POST['kd_jurusan'];
 $nama_jurusan = $_POST['nama_jurusan'];
 
-$res = $config2->query("INSERT INTO jurusan_tav VALUES('$kd_jurusan', '$nama_jurusan')");
+$res = $config->query("INSERT INTO tb_jurusan VALUES('$kd_jurusan', '$nama_jurusan')");
 	if($res){
 		echo "<script>alert('Data berhasil ditambahkan!');document.location.href='index.php?hal=data-jurusan';</script>";
 	} else{
